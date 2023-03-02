@@ -14,8 +14,8 @@ class AutoFactory(object):
             if isclass(_type) and issubclass(_type, autos.AbsAuto):
                 self.autos.update([[name, _type]])
 
-    def create_instance(self, carname):
-        if carname in self.autos:
-            return self.autos[carname]()
+    def create_instance(self, car_name):
+        if car_name in self.autos:
+            return self.autos[car_name]()
         else:
-            return autos.NullCar(carname)
+            return autos.NullCar(car_name)
