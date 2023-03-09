@@ -6,6 +6,7 @@ class Director(object):
         self._builder.new_computer()
         self._builder.get_case()
         self._builder.build_mainboard()
+        self._builder.install_mainboard()
         self._builder.install_hard_drive()
         self._builder.install_video_card()
 
