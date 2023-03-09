@@ -4,7 +4,7 @@ from computer import Computer
 
 class AbsBuilder(abc.ABC):
     def get_computer(self):
-        return self.get_computer()
+        return self._computer
 
     def new_computer(self):
         self._computer = Computer()
