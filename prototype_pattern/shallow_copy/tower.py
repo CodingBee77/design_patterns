@@ -33,4 +33,4 @@ class Tower(AbsComputer, AbsPrototype):
         print(f"Monitor: {self.monitor if self.monitor else 'None'}")
 
     def clone(self):
-        return copy.copy(self)
+        return copy.deepcopy(self)
