@@ -1,7 +1,7 @@
 import abc
 
 class AbsAdapter(abc.ABC):
-    def __int__(self, adaptee):
+    def __init__(self, adaptee):
         self._adaptee = adaptee
 
     @property
