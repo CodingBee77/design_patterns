@@ -1,8 +1,8 @@
 class Vendor(object):
-    def __init__(self, name, number, address):
+    def __init__(self, name, number, street):
         self._name = name
         self._number = number
-        self._address = address
+        self._street = street
 
     @property
     def name(self):
@@ -13,5 +13,5 @@ class Vendor(object):
         return self._number
 
     @property
-    def address(self):
-        return self._address
+    def street(self):
+        return self._street
