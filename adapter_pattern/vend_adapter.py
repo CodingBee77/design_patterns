@@ -1,10 +1,11 @@
-from abs_adapter import AbsAdapter
+from vendor import Vendor
+from customer import Customer
 
-class VendAdapter(AbsAdapter):
-    @property
-    def name(self):
-        return self.adaptee.name
+
+class VendorAdapter(Vendor, Customer):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
     @property
     def address(self):
-        return f"{self.adaptee.number} {self.adaptee.street}"
+        return f"{self.number} {self.street}"
