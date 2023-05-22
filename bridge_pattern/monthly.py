@@ -2,12 +2,12 @@ from abs_subscription import Subscription
 from dateutil.relativedelta import relativedelta
 
 
-class Annual(Subscription):
+class Monthly(Subscription):
 
     @property
     def price_base(self):
-        return 250.0
+        return 50.0
 
     @property
     def expiration(self):
-        return self.enrolled + relativedelta(years=1)
+        return self.enrolled + relativedelta(months=1)

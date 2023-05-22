@@ -3,9 +3,10 @@ import abc
 
 class Subscription(abc.ABC):
 
-    def __init__(self, subscriber, enrolled):
+    def __init__(self, subscriber, enrolled, discount):
         self._subscriber = subscriber
         self._enrolled = enrolled
+        self._discount = discount()
 
     @property
     def subscriber(self):
@@ -17,8 +18,13 @@ class Subscription(abc.ABC):
 
     @property
     @abc.abstractmethod
-    def price(self):
+    def price_base(self):
         pass
+
+    @property
+    def price(self):
+        discount = self._discount.discount
+        return self.price_base * (1 - discount/100)
 
     @property
     @abc.abstractmethod
