@@ -1,5 +1,6 @@
 from abc_composite import AbsComposite
 
+
 class Person(AbsComposite):
     def __init__(self, name, birthdate):
         self._name = name

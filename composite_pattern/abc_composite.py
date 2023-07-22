@@ -1,5 +1,6 @@
 import abc
 
+
 class AbsComposite(abc.ABC):
 
     @abc.abstractmethod
